@@ -4,14 +4,12 @@ use std::{
     io::{BufRead, BufReader},
 };
 
-#[derive(Debug)]
 enum GameResult {
     Win,
     Draw,
     Loss,
 }
 
-#[derive(Debug)]
 enum Game {
     Rock,
     Paper,
