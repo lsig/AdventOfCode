@@ -4,7 +4,6 @@ use std::{
 };
 
 fn main() -> Result<()> {
-    println!("Hello, world!");
     let file = File::open("input.txt")?;
     let content: Vec<String> = match BufReader::new(file).lines().collect() {
         Ok(data) => data,
@@ -25,7 +24,7 @@ fn main() -> Result<()> {
     calories_vector.sort();
 
     let max_calories_vec = &calories_vector[calories_vector.len() - 3..];
-    let top_elf = max_calories_vec[2];
+    let top_elf = max_calories_vec[max_calories_vec.len() - 1];
     let total_cal: i32 = max_calories_vec.iter().sum();
 
     println!("{:?}", top_elf);
