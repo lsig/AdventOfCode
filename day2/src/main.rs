@@ -57,7 +57,6 @@ fn get_games(file: File) -> Result<Vec<(Game, Game)>, Error> {
         for turns in line.chunks(2) {
             if let [p1, p2] = turns {
                 let p_one = opponent(p1)?;
-                // BUG: player funciton
                 let p_two = player(p1, p2)?;
                 let game = (p_one, p_two);
                 games.push(game);
