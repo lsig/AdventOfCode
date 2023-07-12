@@ -75,7 +75,9 @@ func main() {
 	max_calories := calories_arr[max_calories_index]
 	top_three := topThreeElves(calories_arr)
 
-	fmt.Println(max_calories)
-	fmt.Println(top_three)
+	fmt.Printf("The elve with the most calories has: %d calories", max_calories)
+	fmt.Println()
+	fmt.Printf("The top three elves have: %d calories", top_three)
+	fmt.Println()
 
 }
